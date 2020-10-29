@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkFilled(obj){
+            if(obj.value==""){
+                alert("enter name");
+                obj.focus();
+                obj.placeholder = " ";
+            }
+        }
+    </script>
+</head>
+<body onload="document.getElementById('name').focus()">
+    <h3>onfocus와 onblur</h3><hr>
+    <form>
+        이름 : <input id = "name" onblur="checkFilled(this)"><p>
+        학번 : <input type="">
+    </form>
+</body>
+</html>

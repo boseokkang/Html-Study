@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var p;
+        function init(){
+            p = document.getElementById("p");
+            // 방법(1)
+            p.onmouseover = over; // over function 호출 등록
+            p.onmouseout = out; // out function 호출 등록
+            // 방법(2)
+            p.addEventListener("mouseover", over);
+            p.addEventListener("mouseout", out);
+            // 방법(3) : 익명함수 - 한번 쓸 함수라면 정의하지 않아도 바로 넣어서 쓸 수 있다.
+            p.addEventListener("mouseover", function(){
+                p.style.backgroundColor = "orchid";
+            });
+            p.addEventListener("mouseout", function(){
+                p.style.backgroundColor = "white";
+            });
+        }
+        function over(){
+            p.style.backgroundColor = "orchid";
+        }
+        function out(){
+            p.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+    <hr>
+        <p id="p">마우스 올리면 orchid 색으로 변경</p>
+    </body>
+</html>

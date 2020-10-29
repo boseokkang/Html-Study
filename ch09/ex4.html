@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function query(){
+            ret = confirm("너튜브로 이동하시겠습니까?");
+            return ret; // true or false  
+        }
+        function noAction(e){
+            e.preventDefault(); // 이벤트 강제 취소
+        }
+    </script>
+</head>
+<body>
+    <h3>이벤트의 디폴트 행동 취소</h3><hr>
+    <a href="http://youtube.com" onclick="return query()">유튜브</a><hr>
+    <form>
+        <input type="checkbox">빵<br>
+        <input type="checkbox" onclick="noAction(event)" /*옵션:disabled*/>술<br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createDIV() {
+            obj = document.getElementById("parent");
+            newDiv = document.createElement("div");
+            newDiv.innerHTML = "새로 생성된 DIV입니다.";
+            newDiv.setAttribute("id", "myDiv"); // 새롭게 만들어지는 div 태그에 id값
+            newDiv.style.backgroundColor = "orchid";
+            // 익명함수 : 함수에 이름이 없고 바로 onclick에 기능을 구현할 것이기 때문에 
+            newDiv.onclick = function() {
+                p = this.parentElement; // 부모 HTML 태그 요소
+                p.removeChild(this); // 자신을 부모 태그로부터 제거  
+            };
+            obj.appendChild(newDiv); // body에 자식 태그로 추가
+        }
+    </script>
+</head>
+<body id ="parent">
+    <h3>DIV 객체를 동적으로 생성, 삽입, 삭제하는 예제</h3><hr>
+    <a href="javascript:createDIV()">DIV 생성</a><p>
+</body>
+</html>

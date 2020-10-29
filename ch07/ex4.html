@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String 객체 사용하기</h3><hr> 
+    <script>
+        // String은 new 없이도 객체 생성이 가능함
+        var a = new String("Boys and Girls");
+        var b = "!!";
+        // 문자열 - 문자 (한 개의 단어)
+        document.writeln(a.charAt(0) + "<br>");
+        // concat 메소드는 가변인수 선언
+        document.writeln(a.concat(b,"입니다." + "<br>"));
+        document.writeln(a.concat(b) + "<br>");
+        document.writeln(a.concat(b, "a", "bb", "cc" + "<br>"));
+        document.writeln(a.indexOf('s') + "<br>");
+        document.writeln(a.lastIndexOf('s') + "<br>");
+        document.writeln(a.indexOf('and') + "<br>");
+        document.writeln(a.indexOf('And') + "<br>");
+        document.writeln(a.slice(5, 8) + "<br>");
+        document.writeln(a.toUpperCase() + "<br>");
+        document.writeln(a.replace("and", "or") + "<br>");
+        document.writeln("    simba    ".trim() + "<br>");
+        var sub = a.split(" "); //빈칸을 구분자로 분리
+        for(i = 0; i<sub.length; i++){
+            document.writeln(sub[i] + "<br>");
+        }
+
+        document.writeln("<br>");
+
+        /* 
+        var s = "https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=421&aid=0004515570"
+        mode
+        mid
+        sid1
+        oid...
+          -------------
+        LSD
+        shm
+        102
+        102......
+        */
+        var s = new String( "https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=421&aid=0004515570")
+        
+        document.writeln(s.slice(37, 41) + "<br>");
+        document.writeln(s.slice(46, 49) + "<br>");
+        document.writeln(s.slice(54, 58) + "<br>");
+        document.writeln(s.slice(63, 66) + "<br>");
+        document.writeln(s.slice(71, 74) + "<br>");
+        document.writeln("==========" + "<br>");
+        document.writeln(s.slice(42, 45) + "<br>");
+        document.writeln(s.slice(50, 53) + "<br>");
+        document.writeln(s.slice(59, 62) + "<br>");
+        document.writeln(s.slice(76, 85) + "<br>");
+       
+        document.writeln("<hr>");
+        var s = "https://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=102&oid=421&aid=0004515570"
+        document.writeln(s);
+        document.writeln("<hr>");
+       // var len = s.indexOf('?');
+        var s1 = s.slice(s.indexOf('?')+1);
+        //document.writeln(s1);
+        var s2 = s1.split('&');
+        for(i = 0; i<s2.length; i++){
+            var s3 = s2[i].split('=');
+            document.writeln(s3[0] + "<br>"); }
+        document.writeln("<hr>");
+        for(i = 0; i<s2.length; i++){
+        //var s3 = s2[i].split('=');
+            document.writeln(s2[i].split('=')[1] + "<br>");}
+    </script>
+</body>
+</html>

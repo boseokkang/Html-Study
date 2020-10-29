@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function a() {
+            name = prompt("이름을 입력하세요,","")
+            document.writeln(name);
+
+            ok = confirm("결제할까요?");
+            if(ok) {
+                document.writeln("결제 OK");}
+                else{
+                document.writeln("결제 CANCEL"); }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="a()">클릭</button>
+
+</body>
+</html>

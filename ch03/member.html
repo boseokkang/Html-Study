@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>회원정보</h3>
+    <form>
+        <label>이름 : <input name="name" placeholder="이름 입력" required ></label><p>
+        <label>아이디 : 
+        <input name="id" placeholder="아이디 입력" required >
+        <input type="submit" value="중복확인"></label><p>
+        <label>비밀번호 : <input type="password" name="pwd" placeholder="비밀번호 입력" required></label><p>
+        <label>비밀번호 확인 : <input type="password" name="repwd" placeholder="비밀번호 확인" require></label><p>
+        <label>이메일 : <input type="email" name="email" placeholder="Ex)ds10123@naver.com" required></label><p>
+        <label>이메일 수신동의 : 
+        동의<input type="radio" value="1" name="mailagree" >
+        비동의<input type="radio" value="2" name="mailagree"></label><p>
+        전화번호 : 
+        <select name="telnumber" required >
+            <option value="1">SKT</option>
+            <option value="2">KT</option>
+            <option value="3">U+</option>
+            <option value="4">알뜰폰</option>
+        <input type="tel" name="number" placeholder="-빼고 숫자만 입력" required><p>
+        <label>정보이용 
+        <input type="checkbox" value="1" name="agree">개인정보 이용
+        <input type="checkbox" value="2" name="agree">개인정보 사용 </label><p>
+        <input type="submit" value="가입">
+    </form>
+</body>
+</html>

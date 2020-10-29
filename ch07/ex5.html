@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function randomInt(){
+            return Math.floor(Math.random()*9)+1;
+            }
+    </script>
+</head>
+<body>
+    <h3>Math 객체 만들기</h3><hr>
+    <script>
+        var q = randomInt() + "*" + randomInt();
+        var u = prompt(q + "값은 얼마입니까?", "0");
+        // 취소 클릭하면 u값은 null이 된다.
+        if(u == null){
+            document.writeln("구구단 연습을 종료합니다.");
+        }else{
+            var ans = eval(q); //문자열 수식이 계산이 된다.
+            if(u == ans){
+                document.writeln("정답입니다.");
+            }else{
+                document.writeln("오답입니다!!!");
+            }
+        }document.writeln(q + "=" + "<strong>" + ans + "</strong>");
+    </script>
+</body>
+</html>

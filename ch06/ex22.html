@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function adder(a, b) {
+            sum = a + b;
+            return sum;}
+
+        function adder1(){
+            f = document.frm;
+            s = parseInt(f.n1.value) + parseInt(f.n2.value); //숫자로 변환 후에 계산 
+            f.sum.value = s;
+            return; // 생략가능
+        }
+    </script>
+</head>
+<body>
+    <h3>함수</h3><hr>
+    <script>
+        var n = adder(12345, 67890)                                                                                                                               ;
+        document.writeln(n);
+    </script>
+    <form name="frm">
+        숫자1 : <input name="n1"> + 숫자2 : <input name="n2"><br>
+        <input name="sum">
+        <input type="button" value="더하기" onclick="adder1()">
+    </form>
+</body>
+</html>

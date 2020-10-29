@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" c+ontent="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">마우스를 올려 보세요</p>
+    <button onclick="f(event)">클릭하세요</button>
+    <script>
+        function f(e){
+            alert(e.type);}
+         // p태그에 마우스가  over 될 때 f 함수 등록
+        document.getElementById("p").onmouseover = f; 
+    </script>
+</body>
+</html>

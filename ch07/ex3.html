@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Date 객체 사용하기</h3>
+    <script>
+        var now = new Date();
+        document.writeln(now.toUTCString() + "<br>");
+        document.writeln(now.getFullYear() + "<br>");
+        document.writeln((now.getMonth()+1) + "<br>");
+        document.writeln(now.getDate() + "<br>");
+        document.writeln(now.getHours() + "<br>");
+        document.writeln(now.getMinutes() + "<br>");
+        document.writeln(now.getSeconds() + "<br>");
+        document.writeln(now.getMilliseconds() + "<br>"); //초를 1000으로 나눈 값
+        window.setTimeout('window.location.reload()',1000);//1초 단위로 새로고침
+
+        // 페이지 방문시 초 시간이 짝수이면 plum, 홀수이면 lightyellow 배경
+        if(now.getSeconds()%2==0){
+            document.body.style.backgroundColor = "plum";
+        } else {
+            document.body.style.backgroundColor = "lightyellow";}
+    </script>
+</body>
+</html>

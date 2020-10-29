@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(obj, size, color){
+            obj.style.color = color;
+            obj.style.fontSize = size;}
+        function change2(){
+            t = document.getElementById("n1");
+            t.style.color = "red";
+            t.style.fontSize = "50px";}
+    </script>
+</head>
+<body>
+    <h3>this의 활용</h3><hr>
+    <!-- this : 특정한 태그에 종속적이지 않음 -->
+    <button onclick="change(this, '30px', 'red')">버튼1</button>
+    <button onclick="change(this, '40px', 'blue')">버튼2</button>
+    <p id="n1" onclick="change2()">여기 클릭</p>
+    <p id="n1" onclick="change2()">여기 클릭1</p>
+    </body>
+</html>

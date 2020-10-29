@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printStar(n) {
+            var i, j;
+            for(i=1; i<=n; i++){
+                for(j=0; j<i; j++){
+                    document.writeln("*");
+                }document.writeln("<br>");
+            }
+                    }
+    
+    </script>
+</head>
+<body>
+    <h3>별문자 출력하기</h3><hr>
+    <script>
+        var n = prompt("정수를 입력하세요.","1");
+        var m = parseInt(n);
+        if(isNaN(m)||m<=0){ //isNaN을 통해 숫자인지 판단. 숫자가 아니면 true 숫자면 false
+            alert("잘못 입력하셨습니다.");
+        }
+        printStar(n);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   ㄴ
+</head>
+<body>
+    <h3>요일 출력하기</h3><hr>
+    <script>
+        var day;
+        var d = prompt("월화수목금토일 중에서 입력하세요.","");
+        if(d=="월","화","수","목","금"){
+            document.writeln(d + "요일은 출근");
+        }else if(d=="토","일"){
+            document.writeln(d + "요일은 휴일");
+        }else{
+            alert("잘못 입력하셨습니다.");
+        }
+
+
+       /* if(isNaN(m)==false){
+            alert("잘못 입력하셨습니다.");
+        }*/
+    </script>
+    
+</body>
+</html>

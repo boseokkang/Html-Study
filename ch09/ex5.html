@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="color:blue">이것은 
+        <span style="color:red" id="span">문장입니다.
+        </span>
+    </p>
+    <form>
+        <input name="s">
+        <input type="button" value="테스트" id="button">
+        <hr>
+    </form>
+    <div id="div" style="color:green"></div>
+    <script>
+        var div = document.getElementById("div"); //이벤트 메세지 출력 공간
+        var button = document.getElementById("button");
+        // true : 캡쳐과정 window -> targetTag 전달
+        document.body.addEventListener("click", capture, true);
+        // false : 버블 과정 targetTag -> window 전달
+        button.addEventListener("click", bubble, false); 
+
+        function capture(e){
+            obj = e.currentTarget; // 현재 이벤트를 받은 DOM 객체
+            tagName = obj.tagName;
+            div.innerHTML += "<br>capture 단계" + tagName + "태그" + e.type + "이벤트";
+        }
+        function bubble(e){
+            obj = e.currentTarget; // 현재 이벤트를 받은 DOM 객체
+            tagName = obj.tagName;
+            div.innerHTML += "<br>bubble 단계" + tagName + "태그" + e.type + "이벤트";
+        }
+    </script>
+</body>
+</html>

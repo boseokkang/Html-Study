@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h3, li {color: forestgreen;}
+        ul strong {color: dodgerblue;} /*자손*/
+        div > div > strong {background: gold;} /*자식*/
+        body.main{
+            background: aliceblue;
+        }
+        #list {background: lavender;}
+        #list span{color: indianred;}
+        .warning {color: red;}
+        h3:first-letter {color: saddlebrown;}
+        li:hover{background: yellowgreen;}
+    </style>
+</head>
+<body>
+    <h3>Web Programming</h3>
+    <hr>
+    <div> 
+        <div>2학기 <strong>학습 내용</strong>입니다.</div>
+        <ul id="list">
+            <li><span>HTML5</span></li>
+            <li><strong>CSS</strong></li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <div class="warning">60점 이하는 F</div>
+    </div>
+</body>
+</html>

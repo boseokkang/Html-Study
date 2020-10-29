@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1~12월까지 계절 맞추기</h3><hr>
+    <script>
+        var month = prompt("당신이 좋아하는 월을 입력하세요.",3);
+        // 12,1,2: 겨울 3,4,5 : 봄 6,7,8 : 여름 9,10,11 : 가을 
+        // 출력 결과는 ex) 3월은 봄입니다.  ex) 해당하는 계절이 없습니다. 
+        var season;
+        month = parseInt(month);
+        if (month == 12 || month == 1 || month == 2){
+            season = "겨울입니다.";
+        }else if (month == 3 || month == 4 || month == 5){
+            season = "봄입니다.";
+        }else if (month == 6 || month == 7 || month == 8){
+            season = "여름입니다.";
+        }else if (month == 9 || month == 10 || month == 11){
+            season = "가을입니다.";
+        }else 
+            season = "해당하는 계절이 없습니다."; 
+        document.writeln(month + "월은" + season);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>페이지 타이틀</title>
+    <style> 
+    body { background-color : linen; color : green; margin-left : 40px; margin-right : 40px; }
+    h3 { text-align : center; color : darkred; }
+    hr { height : 5px; border:solid pink; background-color : grey; }
+    span {color : blueviolet; font-size : 20px; }
+    </style>
+    <script>
+    function show(){
+    document.getElementById("fig").src="puppy.jpg";
+    }
+    function hide(){
+    document.getElementById("fig").src="";
+    }
+    </script>
+ 
+</head>
+<body>
+    <h3 onmouseover="show()", onmouseout="hide()">puppy</h3>
+    <img id="fig" src="">
+    <hr/>
+    <span>so cute</span>
+
+</body>
+</html>

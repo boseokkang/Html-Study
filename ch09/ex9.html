@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImage(){
+            sel = document.getElementById("sel") ;
+            img = document.getElementById("myImg");
+            img.onload = function(){ //서버로부터 이미지가 로딩될 때
+                mySpan = document.getElementById("mySpan");
+                mySpan.innerHTML = img.width + "x" + img.height;
+            }
+            index = sel.selectedIndex; // 선택한 select의 index 번호, 자동으로 배열 지정
+            //alert(index);
+            img.src = sel.options[index].value; // 선택한 select의 value값을 이미지 경로 지정
+            }
+    </script>
+</head>
+<body onload="changeImage()">
+    <h3>이미지 크기 출력하기</h3><hr>
+    <form>
+        <select id = "sel" onchange="changeImage()">
+            <option value="media/apple.png">사과
+            <option value="media/banana.png">바나나
+            <option value="media/mango.png">망고
+        </select>
+        <span id = "mySpan">이미지 크기</span>
+    </form>
+    <p><img id = "myImg" src = "media/apple.png"></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var files = ["media/penguins.png", 
+                          "media/lighthouse.png",
+                          "media/Chrysanthemum.png",
+                          "media/Desert.png",
+                          "media/Hydrangeas.png",
+                          "media/Jellyfish.png",
+                          "media/Koala.png",
+                          "media/Tulips.png"];
+        var imgs = new Array();
+        for(i=0; i<files.length; i++){
+            imgs[i] = new Image(); // 이미지 객체 생성
+            imgs[i].src = files[i]; // 페이지 로딩시 이미지가 미리 로딩 
+        }
+        var next = 1;
+        function change(obj){
+            obj.src = imgs[next].src;
+            next++;
+            next %= imgs.length; //next = next%imgs.length;
+        }
+    </script>
+</head>
+<body>
+    <h3>new Image()로 이미지 로딩</h3><hr>
+    이미지를 클릭하면 다음 이미지를 보여줍니다.<p>
+    <img style="border: 20px ridge wheat;" src="media/Penguins.png"
+    width="200" height="200" onclick="change(this)">
+</body>
+</html>

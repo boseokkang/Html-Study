@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>테이블 합치기</h3>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+    </table><hr>
+
+    <table border="1">
+        <tr>
+            <td colspan="2">1행 1~2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+    </table><hr>
+
+    <table border="1">
+        <tr>
+            <th width="50">이름</th><th width="50"></th>
+            <th width="50">연락처</th><th width="50"></th>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <th>자기소개서</th>
+            <td colspan="3"></td>
+        </tr>
+    </table><hr>
+
+    <table border="1">
+        <tr>
+            <td rowspan="2">1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <!--<td>2행1열</td>-->
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+</body>
+</html>

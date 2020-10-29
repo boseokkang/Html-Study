@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            alert("보이나요?");
+            f = document.frm;
+            if(f.id.value==""){
+                alert("아이디를 입력하세요.");
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>로그인 폼</h3>
+    <form name="frm" method="" action="">
+        ID : <input size="15" name="id" value=""><br>
+        PWD : <input type="password" size="15" name="pwd"><br>
+        <input type="submit" value="로그인" onclick="check()">
+    </form>
+</body>
+</html>

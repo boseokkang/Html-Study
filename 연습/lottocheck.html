@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<script>
+function checklotto(){
+	var s = document.getElementById("go")
+	s.value = "";
+	var number = new Array(6);
+	var i;
+	var k="N";
+	for(i=0; i<number.length; i++){
+		// 랜덤 번호 생성 1~45
+		number[i]=Math.floor((Math.random()*45)+1);
+		// 중복체크
+		for(j=0; j<i; j++){
+			// 중복이 있다면?
+			if(number[i]==number[j]){
+				// i를 -1을 하고
+				i--;
+				// j for문 탈출
+				break;
+			}
+		}
+	}
+	number.sort(function(a,b){
+		return a-b
+	});
+	s.value = number;
+}
+</script>
+<body>
+<form>
+<table border=1>
+<tr>
+<td border=0>이번 회차의 당첨번호는? </td>
+<td border=0><input type="button" value="확인하기!" onclick="checklotto()"></td>
+<tr>
+<td colspan=2 border=0>
+<input value="0" type="text" size="36" id="go" readonly></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+​
